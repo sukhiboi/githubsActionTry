@@ -23,8 +23,8 @@ jobs:
       - name: Building frontend
         run: |
           cd frontend
-          ls
           npm install
-          npm run-script build
-          ls
+          npm run build
+          mv build ../backend/
+          ls ../backend
           
