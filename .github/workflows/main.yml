@@ -8,4 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test
-        run: npm install && npm test
+        run: pwd && npm install && npm test
+  anotherTest:
+    runs-on: ubuntu-latest
+    steps:
+      run: pwd && npm test
