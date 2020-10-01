@@ -33,7 +33,7 @@ rm -rf backend;
 rm -rf frontend;
 
 ls -al; 
-git remote add heroku https://heroku:${{secret.HEROKU_API_KEY}}@git.heroku.com/githubactions.git
+git remote add heroku https://heroku:${{secrets.HEROKU_API_KEY}}@git.heroku.com/githubactions.git
 rm -rf coverage scripts;
 git add .;
 git commit -m "new commit"
