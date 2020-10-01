@@ -16,14 +16,12 @@ jobs:
           npm test;
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 1000
           repository: sukhiboi/blog-frontend
           path: frontend
       - name: Building frontend
         run: |
           cd frontend;
           npm install;
-          npm test;
           npm run build;
           mv build ..;
           cd ..;
