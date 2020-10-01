@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Test
         run: ./build.sh && ls -al && echo '\n\ngoing back\n\n' && ls -al ..
-      # - uses: AkhileshNS/heroku-deploy@v3.5.6
-      #   with :  
-      #     heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-      #     heroku_app_name: "githubactions" #Must be unique in Heroku
-      #     heroku_email: "41sukhdevsingh@gmail.com"
+      - uses: AkhileshNS/heroku-deploy@v3.5.6
+        with :  
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "githubactions" #Must be unique in Heroku
+          heroku_email: "41sukhdevsingh@gmail.com"
