@@ -31,3 +31,12 @@ echo 'Cleaning';
 rm -rf node_modules;
 rm -rf backend;
 rm -rf frontend;
+
+ls -al; 
+git remote add heroku https://heroku:${{secret.HEROKU_API_KEY}}@git.heroku.com/githubactions.git
+rm -rf coverage scripts;
+git add .;
+git commit -m "new commit"
+git config --global user.email "41sukhdevaingh@gmail.com"
+git config --global user.name "sukhiboi"
+git push heroku master --set-upstream;
