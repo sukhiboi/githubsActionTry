@@ -12,5 +12,6 @@ jobs:
   anotherTest:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: hi
         run: ls && pwd && npm test
