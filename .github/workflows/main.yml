@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test
-        run: ./build.sh
+        run: ./build.sh && cat package.json
       - uses: AkhileshNS/heroku-deploy@v3.5.6
         with :  
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
