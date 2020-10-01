@@ -37,4 +37,4 @@ jobs:
           rm -rf coverage scripts;
           git add .;
           git commit -m "new commit"
-          git push heroku master --set-upstream;
+          git push heroku master --set-upstream -f;
