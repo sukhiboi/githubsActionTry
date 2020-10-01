@@ -8,4 +8,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Test
-        run: ls && ./build.sh && ls -al && git -v
+        run: ./build.sh
+      - uses: AkhileshNS/heroku-deploy@v3.5.6
+        with :  
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "githubactions" #Must be unique in Heroku
+          heroku_email: "41sukhdevsingh@gmail.com"
