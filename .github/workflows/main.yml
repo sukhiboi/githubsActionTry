@@ -11,3 +11,14 @@ jobs:
           fetch-depth: 1000
       - name: Test
         run: ./build.sh
+
+      - name: Deploying to heroku
+        run: |
+          ls -al; 
+          git config --global user.email "41sukhdevaingh@gmail.com"
+          git config --global user.name "sukhiboi"
+          git remote add heroku https://heroku:${{secrets.HEROKU_API_KEY}}@git.heroku.com/githubactions.git
+          rm -rf coverage scripts;
+          git add .;
+          git commit -m "new commit"
+          git push heroku master --set-upstream;
