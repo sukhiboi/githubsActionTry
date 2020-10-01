@@ -12,4 +12,5 @@ jobs:
   anotherTest:
     runs-on: ubuntu-latest
     steps:
+      - name: hi
       run: pwd && npm test
